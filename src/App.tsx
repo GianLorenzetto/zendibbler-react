@@ -37,7 +37,7 @@ function App() {
 function Home() {
   return (
     <div>
-      <p>Home</p>
+      <p>ToDo - coming soon</p>
     </div>
   );
 }
