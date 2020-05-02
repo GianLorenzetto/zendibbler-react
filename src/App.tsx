@@ -2,8 +2,14 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles"
 import NavBar from "./components/NavBar";
+import About from "./pages/About";
 
 const theme = createMuiTheme({
+  typography: {
+    h1: {
+      fontSize: 32
+    }
+  },
   palette: {
     primary: {
       main: '#37474f',
@@ -38,14 +44,6 @@ function Home() {
   return (
     <div>
       <p>ToDo - coming soon</p>
-    </div>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <p>About me</p>
     </div>
   );
 }
