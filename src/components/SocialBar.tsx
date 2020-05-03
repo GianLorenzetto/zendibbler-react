@@ -30,7 +30,7 @@ const SocialBar = () => {
 
   return (
     <Paper className={classes.root}>
-      <Grid container xs={12} direction="row" justify="space-between">
+      <Grid container direction="row" justify="space-between">
         <Grid item>
           <IconButton
             className={classes.iconGroup}
