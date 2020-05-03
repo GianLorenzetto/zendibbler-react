@@ -7,14 +7,15 @@ import {
   makeStyles,
   Theme,
   createStyles,
-  IconButton,
+  Link,
 } from "@material-ui/core";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import TwitterIcon from "@material-ui/icons/Twitter";
+import SocialBar from "../components/SocialBar";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    socialBar: {
+       backgroundColor: "#f5f5f5",
+    },
     avatar: {
       width: theme.spacing(12),
       height: theme.spacing(12),
@@ -51,6 +52,7 @@ function About() {
             ></Avatar>
           </Box>
         </Grid>
+
         <Grid
           container
           item
@@ -69,57 +71,55 @@ function About() {
             </Typography>
           </Grid>
         </Grid>
-        <Grid item>
-          <Typography variant="body1" color="primary"></Typography>
-        </Grid>
+
         <Grid
           container
           item
           xs={6}
           direction="row"
-          justify="flex-start"
+          justify="space-between"
           alignContent="center"
-          alignItems="flex-end"
+          alignItems="center"
+        >
+          <Grid item xs={12}>
+            <SocialBar />
+          </Grid>
+        </Grid>
+
+        <Grid
+          container
+          item
+          xs={6}
+          direction="column"
+          justify="flex-start"
+          alignContent="flex-start"
+          alignItems="flex-start"
         >
           <Grid item className={classes.paraTitle}>
-            <Typography variant="h5" color="primary">
+            <Typography variant="h6" color="primary">
               Who am I?
             </Typography>
           </Grid>
           <Grid item>
-            <Typography variant="body1">I'm a Lead Consultant with Telstra Purple, where my role is to uplift and coach both our intenal teams and customers.</Typography>
+            <Typography variant="body1">
+              I have over 15 years experience delivering software products,
+              across a wide variety of both industries and technologies. In my
+              current role as a Lead Consultant with{" "}
+              <Link
+                target="_blank"
+                rel="noopener"
+                href="https://purple.telstra.com/"
+              >
+                Telstra Purple
+              </Link>
+              , I get to focus on uplifting both our internal and customer
+              teams. I'm especially focused on coaching developers towards more
+              iterative and incremental (ie, agile) delivery of software
+              products.
+            </Typography>
           </Grid>
         </Grid>
-
-        <Grid item>
-          <IconButton
-            className={classes.icon}
-            color="primary"
-            rel="noopener"
-            target="_blank"
-            href="https://twitter.com/TheZenDibbler"
-          >
-            <TwitterIcon />
-          </IconButton>
-          <IconButton
-            className={classes.icon}
-            color="primary"
-            rel="noopener"
-            target="_blank"
-            href="https://www.linkedin.com/in/gianlorenzetto/"
-          >
-            <GitHubIcon />
-          </IconButton>
-          <IconButton
-            className={classes.icon}
-            color="primary"
-            rel="noopener"
-            target="_blank"
-            href="https://github.com/GianLorenzetto"
-          >
-            <LinkedInIcon />
-          </IconButton>
-        </Grid>
+        
       </Grid>
     </div>
   );

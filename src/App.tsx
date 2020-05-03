@@ -25,10 +25,10 @@ function App() {
     <Router>
       <ThemeProvider theme={theme}>
       <div className="App">
-        <NavBar />
+        {/* <NavBar /> */}
         <Switch>
           <Route exact path="/">
-            <Home />
+            <About />
           </Route>
           <Route exact path="/about">
             <About />
