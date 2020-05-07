@@ -13,9 +13,6 @@ import SocialBar from "../components/SocialBar";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    socialBar: {
-       backgroundColor: "#f5f5f5",
-    },
     avatar: {
       width: theme.spacing(12),
       height: theme.spacing(12),

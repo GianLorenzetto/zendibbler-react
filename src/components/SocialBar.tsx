@@ -12,9 +12,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    root: {
-      backgroundColor: "#f5f5f5",
-    },
     iconGroup: {
       padding: 10,
       marginRight: theme.spacing(2),
@@ -29,7 +26,7 @@ const SocialBar = () => {
   let classes = useStyles();
 
   return (
-    <Paper className={classes.root}>
+    <Paper elevation={3}>
       <Grid container direction="row" justify="space-between">
         <Grid item>
           <IconButton
