@@ -70,14 +70,14 @@ function About() {
             Who am I?
           </Typography>
           <Typography variant="body1" paragraph className={classes.para}>
-            I have over 15 years' experience delivering software across a large
-            variety of domains, including medical device manufacturing, medical
-            imaging and autonomous vehicle control. I have deployed software
-            across most major platforms, from small, low budget web applications
-            to enterprise scale, mobile applications. I am passionate about
-            iterative and incremental delivery, best practices in DevSecOps and
-            coaching software teams on how to improve their software delivery
-            processes.
+            I have over 15 years' experience delivering software applications
+            across a large variety of domains, including medical device
+            manufacturing, medical imaging and autonomous vehicle control. I
+            have deployed software across most major platforms, from small, low
+            budget web applications to enterprise scale, mobile applications. I
+            am passionate about iterative and incremental delivery, best
+            practices in DevSecOps and coaching software teams on how to improve
+            their software delivery processes.
           </Typography>
           <Typography variant="body1" paragraph className={classes.para}>
             In my current role as a Lead Consultant with{" "}
