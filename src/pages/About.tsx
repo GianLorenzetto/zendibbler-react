@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme: Theme) =>
     paraTitle: {
       paddingRight: "0.5rem",
     },
+    para: {
+      textAlign: "justify",
+    },
   })
 );
 
@@ -32,7 +35,7 @@ function About() {
 
   return (
     <div>
-      <Box paddingTop="6rem" />
+      <Box paddingTop="4rem" />
       <Grid
         container
         direction="column"
@@ -49,74 +52,49 @@ function About() {
             ></Avatar>
           </Box>
         </Grid>
-
-        <Grid
-          container
-          item
-          direction="column"
-          justify="center"
-          alignItems="center"
-        >
-          <Grid item>
-            <Typography variant="h1" color="primary">
-              Dr Gian Lorenzetto
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant="caption" color="primary">
-              BCM PhD (Comp Sci)
-            </Typography>
-          </Grid>
+        <Grid item>
+          <Typography variant="h1" color="primary">
+            Dr Gian Lorenzetto
+          </Typography>
+          <Typography variant="caption" color="primary">
+            BCM PhD (Comp Sci)
+          </Typography>
         </Grid>
 
-        <Grid
-          container
-          item
-          xs={6}
-          direction="row"
-          justify="space-between"
-          alignContent="center"
-          alignItems="center"
-        >
-          <Grid item xs={12}>
-            <SocialBar />
-          </Grid>
+        <Grid item>
+          <SocialBar />
         </Grid>
 
-        <Grid
-          container
-          item
-          xs={6}
-          direction="column"
-          justify="flex-start"
-          alignContent="flex-start"
-          alignItems="flex-start"
-        >
-          <Grid item className={classes.paraTitle}>
-            <Typography variant="h6" color="primary">
-              Who am I?
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant="body1">
-              I have over 15 years experience delivering software products,
-              across a wide variety of both industries and technologies. In my
-              current role as a Lead Consultant with{" "}
-              <Link
-                target="_blank"
-                rel="noopener"
-                href="https://purple.telstra.com/"
-              >
-                Telstra Purple
-              </Link>
-              , I get to focus on uplifting both our internal and customer
-              teams. I'm especially focused on coaching developers towards more
-              iterative and incremental (ie, agile) delivery of software
-              products.
-            </Typography>
-          </Grid>
+        <Grid item xs={9} md={6}>
+          <Typography variant="h6" color="primary">
+            Who am I?
+          </Typography>
+          <Typography variant="body1" paragraph className={classes.para}>
+            I have over 15 years' experience delivering software across a large
+            variety of domains, including medical device manufacturing, medical
+            imaging and autonomous vehicle control. I have deployed software
+            across most major platforms, from small, low budget web applications
+            to enterprise scale, mobile applications. I am passionate about
+            iterative and incremental delivery, best practices in DevSecOps and
+            coaching software teams on how to improve their software delivery
+            processes.
+          </Typography>
+          <Typography variant="body1" paragraph className={classes.para}>
+            In my current role as a Lead Consultant with{" "}
+            <Link
+              target="_blank"
+              rel="noopener"
+              href="https://purple.telstra.com/"
+            >
+              Telstra Purple
+            </Link>
+            , I get to focus on uplifting both our internal and customer teams.
+            I'm especially focused on coaching developers towards identifying
+            and reducing waste in their software development process, improving
+            their development practices and, most importantly, consistently
+            delivering value to our clients, early and often.
+          </Typography>
         </Grid>
-        
       </Grid>
     </div>
   );
