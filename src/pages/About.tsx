@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     icon: {
       padding: 0,
-      marginRight: theme.spacing(2),
+      marginRight: theme.spacing(1),
     },
     paraTitle: {
       paddingRight: "0.5rem",
@@ -66,7 +66,7 @@ function About() {
         </Grid>
 
         <Grid item xs={9} md={6}>
-          <Typography variant="h6" color="primary">
+          <Typography variant="h2" color="primary">
             Who am I?
           </Typography>
           <Typography variant="body1" paragraph className={classes.para}>

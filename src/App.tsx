@@ -1,12 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
-import NavBar from "./components/NavBar";
 import About from "./pages/About";
+import NavBar from "./components/NavBar";
 
 const theme = createMuiTheme({
   typography: {
+    fontFamily: "Nunito",
     h1: {
+      fontSize: 38,
+      fontWeight: "bold",
+    },
+    h2: {
       fontSize: 32,
     },
   },
@@ -25,7 +30,7 @@ function App() {
     <Router>
       <ThemeProvider theme={theme}>
         <div className="App">
-          {/* <NavBar /> */}
+          <NavBar />
           <Switch>
             <Route exact path="/">
               <About />

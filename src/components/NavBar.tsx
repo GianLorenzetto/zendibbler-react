@@ -5,31 +5,47 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import TwitterIcon from "@material-ui/icons/Twitter";
-
+import {
+  faMedium,
+  faLinkedin,
+  faGithub,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { start } from "repl";
+import { Button, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      flexGrow: 1
+      flexGrow: 1,
     },
     menuButton: {
-      marginRight: theme.spacing(1)
+      marginRight: theme.spacing(1),
     },
     icon: {
-        padding: 0,
-      marginRight: theme.spacing(2)
+      padding: 4,
+      fontSize: 20,
+      marginRight: theme.spacing(1),
     },
     button: {
-      marginRight: theme.spacing(2)
+      textTransform: "none",
+    },
+    buttonText: {
+      fontSize: 20,
+      fontWeight: 700,
+    },
+    activeButton: {
+      color: "#eb7706",
+      fontSize: 20,
+      fontWeight: 700,
     },
     title: {
-      fontSize: 20,
-      fontWeight: 500,
-      flexGrow: 1
-    }
+      flexGrow: 1,
+      fontFamily: "Dancing Script",
+      fontSize: 22,
+      fontWeight: 400,
+    },
   })
 );
 
@@ -38,29 +54,39 @@ const NavBar = () => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="body1" className={classes.title}>
-            Dr Gian Lorenzetto
+      <AppBar position="static" color="inherit" elevation={0}>
+        <Toolbar variant="dense">
+          <Typography variant="body1" color="primary" className={classes.title}>
+            The art and science of software
           </Typography>
 
-          <IconButton className={classes.icon} color="inherit" rel="noopener" target="_blank" href="https://twitter.com/TheZenDibbler">
-              <TwitterIcon />
-          </IconButton>
-          <IconButton className={classes.icon} color="inherit" rel="noopener" target="_blank" href="https://www.linkedin.com/in/gianlorenzetto/">
-              <GitHubIcon />
-          </IconButton>
-          <IconButton className={classes.icon} color="inherit" rel="noopener" target="_blank" href="https://github.com/GianLorenzetto">
-              <LinkedInIcon />
-          </IconButton>
+          <Button variant="text" className={classes.button}>
+            <Typography
+              className={classes.activeButton}
+              variant="body1"
+              color="primary"
+            >
+              About
+            </Typography>
+          </Button>
+          {/* <Button variant="text" className={classes.button}>
+            <Typography
+              className={classes.buttonText}
+              variant="body1"
+              color="primary"
+            >
+              Blog
+            </Typography>
+          </Button>
+          <Button variant="text" className={classes.button}>
+            <Typography
+              className={classes.buttonText}
+              variant="body1"
+              color="primary"
+            >
+              Resources
+            </Typography>
+          </Button> */}
         </Toolbar>
       </AppBar>
     </div>

@@ -1,84 +1,91 @@
 import React from "react";
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import { Grid } from "@material-ui/core";
-import { faMedium } from "@fortawesome/free-brands-svg-icons";
+import { Grid, makeStyles, Theme, createStyles } from "@material-ui/core";
+import {
+  faMediumM,
+  faLinkedin,
+  faGithub,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    iconGroup: {
-      padding: 10,
-      marginRight: theme.spacing(2),
+    iconButton: {
+      padding: 8,
     },
     icon: {
-      paddingRight: 4,
+      fontSize: "20px",
     },
   })
 );
 
 const SocialBar = () => {
-  let classes = useStyles();
+  const classes = useStyles();
 
   return (
-    <Grid container direction="row" justify="space-between">
+    <Grid container direction="row" justify="flex-start">
       <Grid item>
         <IconButton
-          className={classes.iconGroup}
+          className={classes.iconButton}
           color="primary"
           rel="noopener"
           target="_blank"
           href="https://twitter.com/TheZenDibbler"
         >
-          <TwitterIcon className={classes.icon} />
-          <Typography variant="body1">Twitter</Typography>
+          <FontAwesomeIcon
+            icon={faTwitter}
+            color="primary"
+            className={classes.icon}
+          />
         </IconButton>
       </Grid>
 
       <Grid item>
         <IconButton
-          className={classes.iconGroup}
-          color="primary"
-          rel="noopener"
-          target="_blank"
-          href="https://github.com/GianLorenzetto"
-        >
-          <GitHubIcon className={classes.icon} />
-          <Typography variant="body1">GitHub</Typography>
-        </IconButton>
-      </Grid>
-
-      <Grid item>
-        <IconButton
-          className={classes.iconGroup}
+          className={classes.iconButton}
           color="primary"
           rel="noopener"
           target="_blank"
           href="https://medium.com/@gian.lorenzetto"
         >
           <FontAwesomeIcon
-            className={classes.icon}
-            icon={faMedium}
+            icon={faMediumM}
             color="primary"
+            className={classes.icon}
           />
-          <Typography variant="body1">Medium</Typography>
         </IconButton>
       </Grid>
 
       <Grid item>
         <IconButton
-          className={classes.iconGroup}
+          className={classes.iconButton}
+          color="primary"
+          rel="noopener"
+          target="_blank"
+          href="https://github.com/GianLorenzetto"
+        >
+          <FontAwesomeIcon
+            icon={faGithub}
+            color="primary"
+            className={classes.icon}
+          />
+        </IconButton>
+      </Grid>
+
+      <Grid item>
+        <IconButton
+          className={classes.iconButton}
           color="primary"
           rel="noopener"
           target="_blank"
           href="https://www.linkedin.com/in/gianlorenzetto/"
         >
-          <LinkedInIcon className={classes.icon} />
-          <Typography variant="body1">LinkedIn</Typography>
+          <FontAwesomeIcon
+            icon={faLinkedin}
+            color="primary"
+            className={classes.icon}
+          />
         </IconButton>
       </Grid>
     </Grid>
