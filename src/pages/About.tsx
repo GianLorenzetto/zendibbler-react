@@ -13,6 +13,9 @@ import SocialBar from "../components/SocialBar";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    root: {
+      flexGrow: 1,
+    },
     avatar: {
       width: theme.spacing(12),
       height: theme.spacing(12),
@@ -34,37 +37,47 @@ function About() {
   const classes = useStyles();
 
   return (
-    <div>
-      <Box paddingTop="4rem" />
+    <div className={classes.root}>
+      <Box paddingTop="6rem" />
+      <Grid container justify="center">
+        <Grid item xs={9} md={6}>
+          <Grid container justify="space-between">
+            <Grid item>
+              <Grid container direction="column">
+                <Grid item>
+                  <Typography variant="h1" color="primary">
+                    Dr Gian Lorenzetto
+                  </Typography>
+                  <Typography variant="caption" color="primary">
+                    BCM PhD (Comp Sci)
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <SocialBar />
+                </Grid>
+              </Grid>
+            </Grid>
+            <Grid item>
+              <Box border={1} borderRadius="50%">
+                <Avatar
+                  className={classes.avatar}
+                  alt="Gian Lorenzetto"
+                  src="avatar.jpg"
+                />
+              </Box>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+
+      <Box paddingTop="2rem" />
       <Grid
         container
         direction="column"
-        spacing={4}
         justify="flex-start"
         alignItems="center"
+        alignContent="stretch"
       >
-        <Grid item>
-          <Box border={1} borderRadius="50%">
-            <Avatar
-              className={classes.avatar}
-              alt="Gian Lorenzetto"
-              src="avatar.jpg"
-            ></Avatar>
-          </Box>
-        </Grid>
-        <Grid item>
-          <Typography variant="h1" color="primary">
-            Dr Gian Lorenzetto
-          </Typography>
-          <Typography variant="caption" color="primary">
-            BCM PhD (Comp Sci)
-          </Typography>
-        </Grid>
-
-        <Grid item>
-          <SocialBar />
-        </Grid>
-
         <Grid item xs={9} md={6}>
           <Typography variant="h2" color="primary">
             Who am I?

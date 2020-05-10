@@ -12,7 +12,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     iconButton: {
-      padding: 8,
+      paddingLeft: 0,
+      paddingRight: 16,
     },
     icon: {
       fontSize: "20px",
