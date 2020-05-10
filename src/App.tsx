@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import About from "./pages/About";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+import { Container } from "@material-ui/core";
 
 const theme = createMuiTheme({
   typography: {
@@ -39,6 +41,9 @@ function App() {
               <About />
             </Route>
           </Switch>
+          <Container maxWidth="xs">
+            <Footer />
+          </Container>
         </div>
       </ThemeProvider>
     </Router>
