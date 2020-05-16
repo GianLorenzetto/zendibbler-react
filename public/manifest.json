@@ -11,6 +11,16 @@
       "src": "avatar.jpg",
       "type": "image/jpg",
       "sizes": "380x380"
+    },
+    {
+      "src": "boringbits.png",
+      "type": "image/png",
+      "sizes": "389x60"
+    },
+    {
+      "src": "goodstuff.png",
+      "type": "image/png",
+      "sizes": "970x244"
     }
   ],
   "start_url": ".",

@@ -4,7 +4,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import styled from "styled-components";
-import { Tabs, withStyles, Tab } from "@material-ui/core";
+import { Tabs, withStyles, Tab, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -51,6 +51,10 @@ const useStyles = makeStyles((theme: Theme) =>
       fontFamily: "Dancing Script",
       fontSize: 22,
       fontWeight: 400,
+    },
+    goodstuff: {
+      marginTop: 10,
+      marginRight: 40,
     },
   })
 );
@@ -100,18 +104,30 @@ const NavBar = () => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="inherit" elevation={0}>
-        <Toolbar variant="dense">
-          <Typography variant="body1" color="primary" className={classes.title}>
-            The art and science of software
-          </Typography>
+      <Grid container direction="column" alignItems="stretch">
+        <Grid item>
+          <AppBar position="static" color="inherit" elevation={0}>
+            <Toolbar variant="dense">
+              <Typography
+                variant="body1"
+                color="primary"
+                className={classes.title}
+              >
+                The art and science of software
+              </Typography>
 
-          <StyledTabs value={value} onChange={handleChange}>
-            <ResponsiveTab label="About" {...a11yProps(0)} />
-            <ResponsiveTab label="Links" {...a11yProps(1)} disabled />
-          </StyledTabs>
-        </Toolbar>
-      </AppBar>
+              <img src="boringbits.png" height="20"></img>
+              <StyledTabs value={value} onChange={handleChange}>
+                <ResponsiveTab label="About" {...a11yProps(0)} />
+                <ResponsiveTab label="Links" {...a11yProps(1)} disabled />
+              </StyledTabs>
+            </Toolbar>
+          </AppBar>
+        </Grid>
+        <Grid item container justify="flex-end">
+          <img className={classes.goodstuff} src="goodstuff.png" height="40" />
+        </Grid>
+      </Grid>
     </div>
   );
 };
