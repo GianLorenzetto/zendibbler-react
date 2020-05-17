@@ -109,8 +109,8 @@ function About() {
             , I get to focus on uplifting both our internal and customer teams.
             I'm especially focused on coaching developers towards identifying
             and reducing waste in their software development process, improving
-            their development practices and, most importantly, consistently
-            delivering value to our clients, early and often.
+            their development practices and consistently delivering value to our
+            clients, early and often.
           </Typography>
         </Grid>
       </Grid>
