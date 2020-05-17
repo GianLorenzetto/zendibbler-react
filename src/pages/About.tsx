@@ -3,13 +3,10 @@ import {
   Grid,
   Typography,
   Box,
-  Avatar,
   makeStyles,
   Theme,
   createStyles,
-  Link,
 } from "@material-ui/core";
-import SocialBar from "../components/SocialBar";
 import styled from "styled-components";
 
 const BoldText = styled.span`

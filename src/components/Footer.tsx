@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Typography,
-  Container,
-  makeStyles,
-  Theme,
-  createStyles,
-} from "@material-ui/core";
+import { Typography, makeStyles, Theme, createStyles } from "@material-ui/core";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faReact, faAws } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

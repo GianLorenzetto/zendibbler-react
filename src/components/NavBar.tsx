@@ -88,6 +88,31 @@ const ResponsiveTab = styled(Tab)`
   font-size: 18px;
 `;
 
+const BoringBitsImage = () => {
+  return (
+    <img
+      src="boringbits.png"
+      height="22"
+      alt="The boring bits are under the Home tab"
+    />
+  );
+};
+
+const GoodStuffImageStyled = styled.img`
+  margintop: 10;
+  marginright: 40;
+`;
+
+const GoodStuffImage = () => {
+  return (
+    <GoodStuffImageStyled
+      src="goodstuff.png"
+      height="44"
+      alt="The good stuff is under the Resources tab"
+    />
+  );
+};
+
 function a11yProps(index: any) {
   return {
     id: `simple-tab-${index}`,
@@ -145,7 +170,7 @@ const NavBar = () => {
                 The art and science of software
               </Typography>
 
-              <img src="boringbits.png" height="22"></img>
+              <BoringBitsImage />
               <StyledTabs value={value} onChange={handleChange}>
                 <ResponsiveTab label="Home" {...a11yProps(0)} />
                 <ResponsiveTab label="About" {...a11yProps(1)} />
@@ -155,7 +180,7 @@ const NavBar = () => {
           </AppBar>
         </Grid>
         <Grid item container justify="flex-end">
-          <img className={classes.goodstuff} src="goodstuff.png" height="44" />
+          <GoodStuffImage />
         </Grid>
       </Grid>
     </div>
