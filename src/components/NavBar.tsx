@@ -116,7 +116,7 @@ const NavBar = () => {
                 The art and science of software
               </Typography>
 
-              <img src="boringbits.png" height="20"></img>
+              <img src="boringbits.png" height="22"></img>
               <StyledTabs value={value} onChange={handleChange}>
                 <ResponsiveTab label="About" {...a11yProps(0)} />
                 <ResponsiveTab label="Links" {...a11yProps(1)} disabled />
@@ -125,7 +125,7 @@ const NavBar = () => {
           </AppBar>
         </Grid>
         <Grid item container justify="flex-end">
-          <img className={classes.goodstuff} src="goodstuff.png" height="40" />
+          <img className={classes.goodstuff} src="goodstuff.png" height="44" />
         </Grid>
       </Grid>
     </div>
