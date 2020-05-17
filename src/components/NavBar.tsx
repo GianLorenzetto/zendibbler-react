@@ -125,16 +125,17 @@ function tabToRoute(index: number): string {
 }
 
 function routeToTab(tab: string): number {
-  switch (tab.toLowerCase()) {
-    case "/":
-    case "/home":
+  switch (tab.replace("/", "").toLowerCase()) {
+    case "":
+    case "home":
       return 0;
-    case "/about":
+    case "about":
       return 1;
-    case "/resources":
+    case "resources":
       return 2;
 
     default:
+      console.error(`Error: no route matching path ${tab}`);
       return 0;
   }
 }
