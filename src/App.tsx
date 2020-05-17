@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import About from "./pages/About";
+import Home from "./pages/Home";
+import Resources from "./pages/Resources";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import { Container } from "@material-ui/core";
@@ -35,10 +37,13 @@ function App() {
           <NavBar />
           <Switch>
             <Route exact path="/">
-              <About />
+              <Home />
             </Route>
             <Route exact path="/about">
               <About />
+            </Route>
+            <Route exact path="/resources">
+              <Resources />
             </Route>
           </Switch>
           <Container maxWidth="xs">
@@ -47,14 +52,6 @@ function App() {
         </div>
       </ThemeProvider>
     </Router>
-  );
-}
-
-function Home() {
-  return (
-    <div>
-      <p>ToDo - coming soon</p>
-    </div>
   );
 }
 

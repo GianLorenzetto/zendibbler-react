@@ -9,7 +9,6 @@ import {
   createStyles,
   Link,
 } from "@material-ui/core";
-import SocialBar from "../components/SocialBar";
 import styled from "styled-components";
 
 const BoldText = styled.span`
@@ -39,7 +38,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-function About() {
+function Resources() {
   const classes = useStyles();
 
   return (
@@ -55,7 +54,7 @@ function About() {
       >
         <Grid item xs={9} md={6}>
           <Typography variant="body1" paragraph className={classes.para}>
-            <BoldText>Education</BoldText> Todo
+            <BoldText>Resources</BoldText> Todo
           </Typography>
         </Grid>
       </Grid>
@@ -63,4 +62,4 @@ function About() {
   );
 }
 
-export default About;
+export default Resources;

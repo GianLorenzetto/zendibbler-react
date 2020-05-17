@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory, useLocation } from "react-router-dom";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -94,12 +95,19 @@ function a11yProps(index: any) {
   };
 }
 
+function tabToRoute(index: number): string {
+  return index === 0 ? "" : index === 1 ? "About" : "Resources";
+}
+
 const NavBar = () => {
+  const history = useHistory();
+
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
     setValue(newValue);
+    history.push(`/${tabToRoute(newValue)}`);
   };
 
   return (
@@ -118,8 +126,9 @@ const NavBar = () => {
 
               <img src="boringbits.png" height="22"></img>
               <StyledTabs value={value} onChange={handleChange}>
-                <ResponsiveTab label="About" {...a11yProps(0)} />
-                <ResponsiveTab label="Links" {...a11yProps(1)} disabled />
+                <ResponsiveTab label="Home" {...a11yProps(0)} />
+                <ResponsiveTab label="About" {...a11yProps(1)} />
+                <ResponsiveTab label="Resources" {...a11yProps(2)} />
               </StyledTabs>
             </Toolbar>
           </AppBar>
