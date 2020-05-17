@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -99,14 +99,35 @@ function tabToRoute(index: number): string {
   return index === 0 ? "" : index === 1 ? "About" : "Resources";
 }
 
+function routeToTab(tab: string): number {
+  switch (tab.toLowerCase()) {
+    case "/":
+    case "/home":
+      return 0;
+    case "/about":
+      return 1;
+    case "/resources":
+      return 2;
+
+    default:
+      return 0;
+  }
+}
+
 const NavBar = () => {
   const history = useHistory();
+  const location = useLocation();
 
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const [value, setSelectedTab] = React.useState(0);
+
+  useEffect(() => {
+    const { pathname } = location;
+    setSelectedTab(routeToTab(pathname));
+  }, [location]);
 
   const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
-    setValue(newValue);
+    setSelectedTab(newValue);
     history.push(`/${tabToRoute(newValue)}`);
   };
 
