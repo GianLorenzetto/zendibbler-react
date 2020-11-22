@@ -18,6 +18,9 @@ const theme = createMuiTheme({
     h2: {
       fontSize: 32,
     },
+    h3: {
+      fontSize: 28,
+    },
   },
   palette: {
     primary: {

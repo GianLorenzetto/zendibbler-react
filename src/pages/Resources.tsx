@@ -51,10 +51,17 @@ function Resources() {
         alignContent="stretch"
       >
         <Grid item xs={9} md={6}>
-          <Typography variant="body1" paragraph className={classes.para}>
-            <BoldText>Resources</BoldText> Todo
+          <Typography variant="h1" paragraph>
+            Books
           </Typography>
         </Grid>
+
+        <Grid item xs={9} md={6}>
+          <Typography variant="body1" paragraph className={classes.para}>
+            <BoldText></BoldText> Todo
+          </Typography>
+        </Grid>
+
       </Grid>
     </div>
   );

@@ -7,15 +7,10 @@ import {
   makeStyles,
   Theme,
   createStyles,
-  Link,
 } from "@material-ui/core";
 import SocialBar from "../components/SocialBar";
-import styled from "styled-components";
-
-const BoldText = styled.span`
-  font-weight: 800;
-  font-size: 1.1rem;
-`;
+import Heading from "../components/Heading"
+import { PurpleLink } from "./PurpleLink";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -85,32 +80,22 @@ function Home() {
         alignContent="stretch"
       >
         <Grid item xs={9} md={6}>
+        <Heading title="Who am I?"/>
           <Typography variant="body1" paragraph className={classes.para}>
-            <BoldText>Who am I?</BoldText> I have over 15 years' experience
-            delivering software applications across a large variety of domains,
-            including medical device manufacturing, medical imaging and
-            autonomous vehicle control. I have deployed software across most
-            major platforms, from small, low budget web applications to
-            enterprise scale, mobile applications. I am passionate about
-            iterative and incremental delivery, best practices in DevSecOps and
-            coaching software teams on how to improve their software delivery
-            processes.
+          I have over 20 years experience developing unique software 
+            solutions over a wide variety of domains, from medical device manufacturing and medical imaging, 
+            to mining, finance, IoT, and autonomous vehicle control. I have worked with most major platforms 
+            and a large array of technologies, from simple websites, to enterprise scale mobile applications 
+            and advanced desktop visualization software.
           </Typography>
+          <Heading title="What I do"/>
           <Typography variant="body1" paragraph className={classes.para}>
-            <BoldText>What I do</BoldText> In my current role as a Lead
-            Consultant with{" "}
-            <Link
-              target="_blank"
-              rel="noopener"
-              href="https://purple.telstra.com/"
-            >
-              Telstra Purple
-            </Link>
-            , I get to focus on uplifting both our internal and customer teams.
-            I'm especially focused on coaching developers towards identifying
-            and reducing waste in their software development process, improving
-            their development practices and consistently delivering value to our
-            clients, early and often.
+            In my current role as a Managing Consultant with{" "}<PurpleLink />, I get to focus on uplifting 
+            both our internal and customer teams. I'm especially passionate about working in highly 
+            collaborative, cross-functional teams, including client domain experts to unearth innovative, but 
+            inherently valuable software. My current focus is on helping teams understand the benefits of 
+            iterative and incremental delivery, best practices in DevSecOps and coaching them on how to improve 
+            their software delivery processes and practices.
           </Typography>
         </Grid>
       </Grid>
