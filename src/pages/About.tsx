@@ -148,6 +148,30 @@ function About() {
             Azure Pipelines, Octopus Deploy, TeamCity, Jenkins, AWS CodeBuild
           </Typography>
           
+          <Typography variant="h2">Publications</Typography>
+
+          <Heading title="2004" />
+
+          <Typography variant="body1" paragraph className={classes.para}>
+            Lorenzetto, G. P. A. &#38; Datta, A.<Dot />
+            <Italics>An almost linear-time algorithm for trapezoidation of GIS polygons</Italics><Dot />
+            <Bold>In</Bold>{" "}Future Generation Computer Systems. 20, 7, p. 1145-1155<Dot />2004
+          </Typography>
+       
+          <Heading title="2002" />
+
+          <Typography variant="body1" paragraph className={classes.para}>
+            Lorenzetto, G. P. A., Datta, A. &#38; Thomas, R.<Dot />
+            <Italics>A fast trapezoidation technique for planar polygons</Italics><Dot />
+            <Bold>In</Bold>{" "}Computers &#38; Graphics. 26, 2, p. 281-289 <Dot />2002
+          </Typography>
+
+          <Typography variant="body1" paragraph className={classes.para}>
+            Lorenzetto, G. P. A. &#38; Datta, A.<Dot />
+            <Italics>A Linear Time Heuristics for Trapezoidation of GIS Polygons</Italics><Dot />
+            <Bold>In</Bold>{" "}Lecture Notes in Computer Science. 2331, p. 75-84<Dot />2002
+          </Typography>
+
         </Grid>
       </Grid>
     </div>
