@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme: Theme) =>
       fontWeight: 700,
     },
     activeButton: {
-      color: "#eb7706",
+      color: "#e47306",
       fontSize: 20,
       fontWeight: 700,
     },

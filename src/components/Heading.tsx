@@ -16,7 +16,7 @@ import {
 const BoldText = styled.span`
   font-weight: 800;
   font-size: 1rem;
-  color: #333;
+  color: #e47306;
 `;
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -31,12 +31,14 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: "8px",
       paddingLeft: 8,
       paddingRight: 10,
-      paddingBottom: 1.5,
+      paddingBottom: 2,
+      color: "#e47306",
     },
     cookie: {
       fontSize: "8px",
       paddingLeft: 10,
-      paddingBottom: 1.5,
+      paddingBottom: 2,
+      color: "#e47306",
     }
   })
 );

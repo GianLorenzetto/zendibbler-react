@@ -93,9 +93,9 @@ function Home() {
             In my current role as a Managing Consultant with{" "}<PurpleLink />, I get to focus on uplifting 
             both our internal and customer teams. I'm especially passionate about working in highly 
             collaborative, cross-functional teams, including client domain experts to unearth innovative, but 
-            inherently valuable software. My current focus is on helping teams understand the benefits of 
-            iterative and incremental delivery, best practices in DevSecOps and coaching them on how to improve 
-            their software delivery processes and practices.
+            inherently valuable and human-centred software. My current focus is on helping teams understand the 
+            benefits of iterative and incremental delivery, best practices in DevSecOps and coaching them on how 
+            to improve their software delivery processes and practices.
           </Typography>
         </Grid>
       </Grid>
